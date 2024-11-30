@@ -27,23 +27,20 @@ export const Header = () => {
           <Loader className="h-5 w-5 text-muted-foreground animate-spin"></Loader>
         </ClerkLoading>
         <ClerkLoaded>
-          <SignedIn>
-            <UserButton 
-            afterSignOutUrl="/"
-            />
-          </SignedIn>
-          <SignedOut>
-            <SignInButton
-              mode="modal"
-              afterSignInUrl="/learn"
-              afterSignUpUrl="/learn"
-            >
-              <Button size={"lg"} variant={"ghost"}>
-                Iniciar sesion
-              </Button>
-            </SignInButton>
-          </SignedOut>
-        </ClerkLoaded>
+  <SignedIn>
+    <UserButton />
+  </SignedIn>
+  <SignedOut>
+    <SignInButton
+      mode="modal"
+      signUpFallbackRedirectUrl="/learn"
+    >
+      <Button size={"lg"} variant={"ghost"}>
+        Iniciar sesion
+      </Button>
+    </SignInButton>
+  </SignedOut>
+</ClerkLoaded>
       </div>
     </header>
   );
